@@ -1,0 +1,63 @@
+$text-MonL: "Montserrat-Light";
+$text-RalM: "Raleway-Medium";
+$text-RalEB: "Raleway-ExtraBold";
+$text-Color: #555;
+$color-Hover: #998675;
+$text-Hover: #c7b299;
+$BG-Hover: #362f2d;
+$width-md: 768px;
+
+.counters {
+    height: 18.75em;
+    background-color: $BG-Hover;
+    font-size: 1rem;
+    padding: 0 .9rem;
+    @media (max-width: $width-md) {
+        font-size: .5rem;
+    }
+    .row {
+        height: 18.75em;
+    }
+    &-block {
+        // height: 16em;
+        padding: 0 .5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        & img {
+            width: 2.75em;
+            height: 2.75em;
+        }
+        &:nth-child(2) img {
+            width: 3em;
+        }
+        &:last-child img {
+            width: 3.375em;
+        }
+
+        &__content {
+            font: {
+                family: $text-MonL;
+                size: 2.5em;
+                weight: 100;
+            }
+            color: white;
+            text-align: center;
+            &:nth-child(3) {
+                height: 2.7rem;
+                font-size: .875rem;
+                color: $text-Hover;
+                font-weight: 700;
+                @media (max-width: $width-md) {
+                    font-size: .6rem;
+                }
+            }
+            &:last-child {
+                width: 36px;
+                border-bottom: 2px solid white;
+            }
+        }
+        
+    }
+}

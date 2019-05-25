@@ -1,0 +1,38 @@
+$text-MonL: "Montserrat-Light";
+$text-RalM: "Raleway-Medium";
+$text-RalEB: "Raleway-ExtraBold";
+$text-Color: #555;
+$color-Hover: #998675;
+
+
+.buttons {
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+.btn.btn-secondary {
+    background-color: white;
+    color: $text-Color;
+    font: {
+        family: $text-MonL;
+        size: .875rem;
+    }
+    padding: {
+        left: 1.5em;
+        right: 1.5em;
+    }
+    @media (max-width: 768px) {
+        font-size: .8rem;
+        padding: .3em 0.3em;
+        width: 90px;
+    }
+}
+.btn.btn-secondary:hover {
+    background-color: $color-Hover;
+    color: white;
+    border-color: $color-Hover;
+}

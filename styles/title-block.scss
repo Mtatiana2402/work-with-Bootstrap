@@ -1,0 +1,50 @@
+$text-MonL: "Montserrat-Light";
+$text-RalM: "Raleway-Medium";
+$text-RalEB: "Raleway-ExtraBold";
+$text-Color: #555;
+$color-Hover: #998675;
+
+        
+.title-block {
+    margin-top: 5em;
+    margin-bottom: 2em;
+    color: $text-Color;
+    font-size: 1rem;
+    @media (max-width: 768px) {
+        font-size: .5rem;
+    }
+    &__title {
+        font: {
+            family: $text-RalM;
+            size: 1.875rem;
+            weight: 700;
+            } 
+        @media (max-width: 768px)  {
+            font-size: 1rem;
+        }          
+    }
+    &__text {
+        width: 700px;
+        margin: 0 auto;
+        font: {
+            family: $text-MonL;
+            size: 1rem;
+            }
+        @media (max-width: 768px) {
+            width: auto;
+            font-size: .8rem
+        }
+    }
+    
+}    
+.title-block__image {
+        height: 456px;
+        background-image: url(images/browser.png);
+       
+        @media (max-width: 1200px) {
+            // width: 100vw;
+            height: calc(100vw / 2.5);
+            background-size: 100% 100%;
+        }
+}
+    

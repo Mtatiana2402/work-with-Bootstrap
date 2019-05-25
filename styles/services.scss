@@ -1,0 +1,151 @@
+$text-MonL: "Montserrat-Light";
+$text-RalM: "Raleway-Medium";
+$text-RalEB: "Raleway-ExtraBold";
+$text-Color: #555;
+$color-Hover: #998675;
+
+.services {
+    margin-top: 5em;
+    font-size: 1rem;
+    &-block {
+        height: 13rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        &__title {
+            font: {
+                family: $text-RalM;
+                size: 1.375rem;
+                weight: 700;
+            }
+            color: $text-Color;
+        }
+        &__text {
+                font: {
+                    family: $text-MonL;
+                    size: .8125rem;
+                    weight: 400;
+                }
+                line-height: 1.25rem;
+                letter-spacing: -.0625rem;
+                text-align: center;
+        }
+        &__line {
+                width: 4.375rem;
+                border-bottom: 1px solid $color-Hover; 
+                visibility: hidden;               
+            }
+        }
+    
+    &-block img {
+        background-color: $text-Color;
+    }
+    &-block:hover {
+        img {
+            background-color: $color-Hover;
+        }
+    }
+    &-block:hover
+    .services-block__title {
+        color: $color-Hover;
+    }
+    &-block:hover .services-block__line {
+        visibility: visible;
+    }
+    @media (max-width: 768px) {
+        font-size: .5rem;
+    }
+}
+// .card {
+//         margin-top: 5em;
+//         border: none;
+//         color: $text-Color;
+//         font-size: 1rem;
+//         .card-title {
+//             font: {
+//                 family: $text-RalM;
+//                 size: 1.875em;
+//                 weight: 700;
+//             }            
+//         }
+//         .card-text {
+//             font: {
+//                 family: $text-MonL;
+//                 size: 1em;
+//             }
+//         }
+//     @media (max-width: 768px) {
+//         font-size: .5rem;
+//     }
+// }
+
+// .card:nth-child(4) {
+//     margin-top: 5em;
+// }
+
+
+.text-box {
+    width: 100%;
+    height: 9.375em;
+    background-color: #2f231d;
+    font-size: 1rem;
+    @media (max-width: 768px) {
+        font-size: .5rem;
+        padding-right: .9rem;
+    }
+    .container {
+        height: inherit;
+        .row {
+            height: 100%;
+            color: white;
+            .col-9 h5 {
+                font: {
+                    family: $text-RalM;
+                    size: 1.75em;
+                }
+                & b {
+                    color: $color-Hover;
+                }
+            }
+            .col-9 p {
+                margin: 0;
+                font: {
+                    family: $text-MonL;
+                    size: 1.3em;
+                }
+                color: $text-Color;
+            }
+        }
+    
+    }
+    .btn {
+        padding: 0;
+        width: 100%;
+        height: 3.125em;
+        background-color: $color-Hover;
+        border-radius: .312em;
+        border-bottom: .125rem solid #736357;
+        color: $color-Main;
+        text-align: center;
+       
+        font: {
+            family: $text-RalEB;
+            size: .875rem;
+        }
+        @media (max-width: 768px) {
+            font-size: .6rem;
+        }
+        
+    }
+       
+}
+@media (max-width: 367px) {
+    .col-3.btn {
+    padding: 0;
+    }
+}
+
+

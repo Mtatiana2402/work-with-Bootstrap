@@ -1,0 +1,89 @@
+$text-MonL: "Montserrat-Light";
+$text-RalM: "Raleway-Medium";
+$text-RalEB: "Raleway-ExtraBold";
+$text-Color: #555;
+$color-Hover: #998675;
+$text-Hover: #c7b299;
+$BG-Hover: #362f2d;
+$width-md: 768px;
+
+.container.cards {
+    margin-top: 2.5em;
+    .card-deck {
+        // margin-top: 2.5em;
+        .icons {
+            position: absolute;
+            top: 30%;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            & div {
+                flex-basis: 3.75rem;
+            }
+            visibility: hidden;
+        }
+    }
+    
+    .card-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .card {
+        margin-top: 0;
+        border: none;
+        &-title { 
+            font: {
+                family: $text-RalM;
+                size: 1.25rem;
+            }
+            color: $text-Hover;
+        }
+        &-text {
+            font: {
+                family: $text-MonL;
+                size: .875rem;
+            }
+            color: $text-Color;
+        }
+    }
+    .card:hover {
+        .card-body {
+            background-color: $BG-Hover;
+            padding-left: 15px;
+        }
+        .card-title {
+            color: white;
+        }
+        .card-text {
+            color: $text-Hover;
+        }
+        .icons {
+            visibility: visible;
+        }
+    }
+
+    .btn {
+        margin-top: 3em;
+        margin-bottom: 5em;
+        padding: 0;
+        width: 100%;
+        height: 3.125em;
+        background-color: $color-Hover;
+        border-radius: .312em;
+        border-bottom: .125rem solid #736357;
+        color: $color-Main;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+        font: {
+            family: $text-RalEB;
+            size: .875rem;
+        }
+    }
+    @media (max-width: 768px) {
+        .btn {
+        font-size: .6rem;
+        }
+    }    
+    
+}
